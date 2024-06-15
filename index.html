@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main_style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+
+
+<body>
+  <!--NAV BAR LEFT SIDE ANIMATED-->
+  <div class="sidebar">
+    <div class="logo-details">
+        <div class="logo_name">MENU</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+
+    <ul class="nav-list">
+      <li>
+        <a href="/index.html">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+         <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+       <a href="/profile.html">
+         <i class='bx bx-user-circle'></i>
+         <span class="links_name">User</span>
+         
+       </a>
+       <span class="tooltip">User</span>
+     </li>
+     
+     <li>
+       <a href="/cart.html">
+         <i class='bx bx-cart-alt' ></i>
+         <span class="links_name">My Cart</span>
+       </a>
+       <span class="tooltip">My Cart</span>
+     </li>
+     <li>
+       <a href="/wishlist.html">
+         <i class='bx bx-heart' ></i>
+         <span class="links_name">Wishlist</span>
+       </a>
+       <span class="tooltip">Wishlist</span>
+     </li>
+     <li>
+       <a href="/settings.html">
+         <i class='bx bx-cog' ></i>
+         <span class="links_name">Settings</span>
+       </a>
+       <span class="tooltip">Settings</span>
+     </li>
+  </div>
+<!--END OF NAV BAR LEFT SIDE ANIMATED-->
+
+<!--HOMEPAGE-->
+  <section class="home-section">
+      <div class="textlogo">H I R A Y A</div>
+      <div class="socials">
+        Our Socials
+      </div>
+      <div class="socialsicons">
+        .....
+      </div>
+      <div class="banner-container">
+        <div class="tops">
+          <a href="/tops.html">
+            <img src="/image/tops.png" alt="Tops">
+          </a>
+        </div>
+        <div class="accessories">
+          <a href="/accessories.html">
+            <img src="/image/accessories.png" alt="Accessories">
+          </a>
+        </div>
+        <div class="bottoms">
+          <a href="/bottoms.html">
+            <img src="/image/Untitled.png" alt="Bottoms">
+          </a>
+        </div>
+      </div>
+
+      <div class="child-bleft-text">Sale Offers!</div>
+      <div class="childsales">
+        <div class="bottombar">
+          <div class="bottomsales">
+            <div class="cards">
+              <figure class="card">
+                <a href="offerone.html">
+                  <img src="/icons/icon draft.png" alt="Oone">
+                </a>
+                <figcaption class="card_title">One!</figcaption>
+              </figure>
+            </div>
+            <div class="cards">
+              <figure class="card">
+                <a href="offertwo.html">
+                  <img src="/icons/icon draft.png" alt="Otwo">
+                </a>
+                <figcaption class="card_title">Two!</figcaption>
+              </figure>
+            </div>
+            <div class="cards">
+              <figure class="card">
+                <a href="offerthree.html">
+                  <img src="/icons/icon draft.png" alt="Othree">
+                </a>
+                <figcaption class="card_title">Three!</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hirayalogo">
+        <img src="/image/Logo.jpg" alt="Logo">
+      </div>
+      
+  </section>
+<!--END OF HOMEPAGE-->
+
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();
+  });
+
+  searchBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();
+  });
+
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+   }
+  }
+  </script>
+</body>
+</html>
